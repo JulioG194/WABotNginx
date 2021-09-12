@@ -19,7 +19,8 @@ const setupClientWhatsApp = () => {
   const client = new Client({
     session: sessionData,
     puppeteer: {
-      args: ['--no-sandbox', '--disable-setuid-sandbox']
+      args: ['--no-sandbox', '--disable-setuid-sandbox'],
+      executablePath: '/opt/google/chrome/google-chrome'
     }
   });
 
