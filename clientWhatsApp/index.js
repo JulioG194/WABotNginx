@@ -18,6 +18,9 @@ const setupClientWhatsApp = () => {
 
   const client = new Client({
     session: sessionData,
+    puppeteer: {
+      args: ['--no-sandbox', '--disable-setuid-sandbox']
+    }
   });
 
   client.on("authenticated", (session) => {
