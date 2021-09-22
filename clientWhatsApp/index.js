@@ -37,7 +37,6 @@ const setupClientWhatsApp = () => {
   client.on("qr", (qr) => {
     qrcode.generate(qr, { small: true });
     console.log(qr);
-    console.log(qr);
     fs.unlinkSync("./qr_whatsapp.png");
     const qr_svg = qrImg.image(qr, {type: "png"});
     const stream = fs.createWriteStream("qr_whatsapp.png")
